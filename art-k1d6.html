@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年Clash Verge Rev新手到精通教程：自定义分流规则与延迟测速优化 | 专线知识库</title>
+  <meta name="description" content="2026 年桌面端王者 Clash Verge Rev 全方位上手指南！详解 Mihomo 内核切换、TUN 模式配置、扩展脚本覆写与科学测速技巧。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 顶部精简导航 (按规范全文章仅建这1个返回按钮) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span>🌸 Flower Cloud</span>
+        <span class="logo-badge">Verge Rev 进阶</span>
+      </a>
+      <div class="nav-cta">
+        <a href="recom-c89.html" class="btn btn-white" style="padding: 10px 18px; font-size: 0.95rem;">
+          &larr; 返回推荐咨询
+        </a>
+        <a href="https://ongkahheng0.flashleapaff.com/#?code=Wx6Ins9f" target="_blank" rel="nofollow" class="btn btn-primary" style="margin-left: 12px; padding: 10px 18px; font-size: 0.95rem;">
+          立即注册
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 30px;">
+    <div class="article-header">
+      <span class="comic-tag yellow">Verge Rev 进阶</span>
+      <h1 class="section-title" style="max-width: 900px; margin: 15px auto;">2026年Clash Verge Rev新手到精通教程：自定义分流规则与延迟测速优化</h1>
+      <div class="article-meta-bar">
+        <span>📅 发布日期：2026-10-17</span>
+        <span>🏷️ 标签：2026年机场推荐 · Clash · 网络加速</span>
+        <span>🛡️ 审核：网络协议安全实验室</span>
+      </div>
+    </div>
+
+    <article class="article-content">
+      <h2>引言：桌面端主力客户端 Clash Verge Rev 的崛起</h2>
+      <p>在跨平台开源网络代理软件的发展历程中，客户端生态经历了一轮又一轮优胜劣汰。2026 年，基于 Tauri 框架打造、原生集成 Mihomo（Clash.Meta）先进内核的开源利器——<strong>Clash Verge Rev</strong>，凭借其现代精致的 UI 界面、极低的内存占用、对现代化操作系统的完美契合，以及极其强大易用的扩展脚本与覆写系统，已然成为广大桌面端用户首选的王者级代理客户端。然而，不少初学者面对 Verge Rev 丰富的参数选项与扩展机制常感到困惑。本篇实战教程带你从零起步，系统掌握 Clash Verge Rev 从环境部署、订阅集管理、扩展脚本编写到科学测速优选的全部精髓。</p>
+
+      <h2>一、软件安装与初次初始化关键配置精讲</h2>
+      <p>前往开源仓库下载对应系统的发行版安装包。安装完成后启动软件，在开始使用前，务必在系统设置中完成以下核心初始化：</p>
+      <ul>
+        <li><strong>内核切换与选择（Mihomo / Clash.Meta）：</strong> 确保核心类型选用兼具多协议支持与最新特性的 Mihomo 内核，以便原生支持 VLESS Reality、Hysteria 2、TUIC 以及全新的 DNS 路由规则。</li>
+        <li><strong>TUN 模式服务安装与权限赋予：</strong> 在设置界面点击安装“TUN 模式服务”，安装成功后会出现绿色标记。开启 TUN 模式后，系统所有出站流量均会被虚拟网卡透明接管，无需针对各个软件单独配置代理端口。</li>
+        <li><strong>系统代理与开机自启：</strong> 勾选开机自启动与静默启动至托盘，保证每次开机均能在后台无感提供加速服务。</li>
+      </ul>
+
+      <h2>二、从订阅导入到 Rule Provider 规则集管理</h2>
+      <p>在配置（Profiles）界面中，点击右上角新建配置，选择从 URL 导入。将服务商（例如 <a href="index.html">Flower Cloud 官网首页</a>）后台提供的 Clash 专用订阅链接粘贴至输入框，命名后保存并右键启用：</p>
+      <p>为了让规则能够紧随全球网络环境实时演进，建议在配置右键菜单中设置自动更新间隔，设定为 1440 分钟（即每 24 小时自动拉取一次最新的节点与规则）。此外，Clash Verge Rev 支持高阶的 `rule-providers` 机制，用户可以通过引入远程行为规则集，实现对海外社交、流媒体平台以及国内广告域名的自动化细粒度匹配，彻底摆脱旧式客户端繁冗死板的手动规则维护负担。</p>
+
+      <h2>三、扩展脚本与高阶自定义覆写玩法</h2>
+      <p>扩展脚本是 Clash Verge Rev 展现极客魅力的核心功能。通过编写简洁的 JavaScript 扩展脚本，用户可以在订阅配置被内核加载的瞬间对其数据结构进行动态劫持与覆写：</p>
+      <p>例如，若希望为所有订阅节点强行插入一组特定的 DNS 配置或追加自定义的策略组，只需在脚本菜单中新建覆写脚本，利用内置函数直接对 `config.dns` 和 `config['proxy-groups']` 对象进行编程化修改。通过脚本覆写，用户无需每次手动修改下载回来的配置文件，即便远程订阅更新，你的自定义个性化规则、首选节点顺序以及分流逻辑也会被自动化精准注入，极大提升了多设备维护效率。</p>
+
+      <h2>四、科学测速：告别单次握手伪测速与优选策略</h2>
+      <p>很多新手喜欢在主界面疯狂点击测速图标，并单纯依照数值大小判断节点好坏，这存在认知误区：</p>
+      <p>主界面默认的延迟数值本质上只是客户端到节点入口的第一跳 TCP 握手耗时。一个延迟显示为 15ms 的节点，可能在出境后的国际公网段早已严重拥塞；反之，一个延迟显示为 130ms 的美西专线，却能跑满千兆带宽。因此，在 Clash Verge Rev 中，推荐在策略组中使用 `url-test` 机制，指定权威的测试点（如 Google 204），并设置容差阈值，让客户端在后台自动根据综合链路质量进行平滑优选切换。</p>
+
+      <h2>五、行业权威参考与专线生态指引</h2>
+      <p>优秀的客户端搭配顶级专线，才能彻底释放出澎湃的性能。如果您想深入了解当前主流专线机场在 Clash Verge Rev 平台上的跑分横评与长期稳定性监控，建议随时访问权威评测门户 <a href="https://jichangpaihang.com" target="_blank">jichangpaihang.com</a> 查阅最新的实测数据；若希望获取更多关于扩展脚本的现成代码模版与规则集锦，亦强烈推荐参考技术博客 <a href="https://jichanglink.com" target="_blank">jichanglink.com</a>。掌握利器、通晓规则，方能在数字天空中随心驰骋。</p>
+
+      <div class="article-bottom-actions">
+        <div style="font-weight: 800; color: #4b5563;">
+          本文遵循知识共享许可，转载请保留出处与链接。
+        </div>
+        <div>
+          <a href="https://ongkahheng0.flashleapaff.com/#?code=Wx6Ins9f" target="_blank" rel="nofollow" class="btn btn-pink">
+            🚀 体验 Flower Cloud 高速专线
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- 页脚 (严格只保留四个标题，打开新页面) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <a href="sitemap.html" target="_blank" class="footer-link">网站地图</a>
+        <a href="about.html" target="_blank" class="footer-link">关于我们</a>
+        <a href="terms.html" target="_blank" class="footer-link">服务条款</a>
+        <a href="privacy.html" target="_blank" class="footer-link">隐私政策</a>
+      </nav>
+      <div class="footer-copyright">
+        &copy; 2026 Flower Cloud. 保留所有权利。 专线直连 · 畅享极速网络体验
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

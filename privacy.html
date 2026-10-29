@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 | Flower Cloud 零日志隐私安全保障承诺</title>
+  <meta name="description" content="Flower Cloud 官方隐私政策，郑重承诺严格执行无日志（No-Logs）准则，无盘 RAM 架构保障用户网络活动、访问记录与 DNS 解析 100% 不记录、不存储。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span>🌸 Flower Cloud</span>
+        <span class="logo-badge">隐私政策</span>
+      </a>
+      <div class="nav-cta">
+        <a href="index.html" class="btn btn-white" style="padding: 10px 18px; font-size: 0.95rem;">
+          &larr; 返回首页
+        </a>
+        <a href="https://ongkahheng0.flashleapaff.com/#?code=Wx6Ins9f" target="_blank" rel="nofollow" class="btn btn-primary" style="margin-left: 12px; padding: 10px 18px; font-size: 0.95rem;">
+          立即注册
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 30px;">
+    <div class="subpage-header">
+      <span class="comic-tag pink">隐私优先</span>
+      <h1 class="section-title">隐私政策与零日志承诺</h1>
+      <p class="section-desc">您的隐私不仅是口号，更是我们自底层基础设施构建之初便不可撼动的工程准则。</p>
+    </div>
+
+    <article class="subpage-content-card">
+      <div class="subpage-notice">
+        🛡️ <strong>核心结论：Flower Cloud 绝不记录、不监视、不存储任何用户的上网行为与访问日志。</strong><br>
+        我们的无盘服务器集群无法在断电或重启后保留任何挥发性数据。
+      </div>
+
+      <p>
+        Flower Cloud（以下简称“我们”）深知用户对个人数据与网络活动隐私的关切。本《隐私政策》旨在清晰、透明地向您说明我们在您使用本网络加速和代理转发服务时，对待用户数据的基本原则与技术实践。
+      </p>
+
+      <!-- 1. 严格的不保留日志政策 -->
+      <h2>🔒 一、严格的零使用日志声明</h2>
+      <p>
+        在网络加速代理服务的核心数据处理流程中，我们恪守业界最高规格的 <strong>零日志</strong> 承诺。具体而言：
+      </p>
+      <ul>
+        <li><strong>不记录浏览历史：</strong> 我们绝不记录、检查或抓取您通过 Flower Cloud 节点访问的任何网址、域名、网页内容或网络请求。</li>
+        <li><strong>不记录目标流量：</strong> 我们绝不分析、存储或还原您的网络传输数据包 Payload，所有流量在端到端均经过现代高强度对称加密传输。</li>
+        <li><strong>不记录 DNS 查询历史：</strong> 所有域名解析请求均由我们部署在专线节点内的本地纯内存 DNS 模块即时完成，不向任何第三方公网 DNS 转发，且不保存任何查询日志。</li>
+        <li><strong>不记录真实 IP 绑定：</strong> 我们不会将用户登录后分配的动态出口节点 IP 与您真实的客户端接入公网 IP 进行持久化映射关联。</li>
+        <li><strong>不记录连接时间戳：</strong> 我们绝不保存用户每次连入与断开节点的具体精确时间戳日志。</li>
+      </ul>
+
+      <!-- 2. 技术保障架构：纯 RAM 无盘运行 -->
+      <h2>⚙️ 二、技术实现：无盘 RAM 内存化节点集群</h2>
+      <p>
+        口头承诺不及硬件级物理隔离。为彻底根除数据泄露隐患，Flower Cloud 全球边缘中继节点均部署了严格的无盘化架构：
+      </p>
+      <ul>
+        <li><strong>RAM 易失性内存系统：</strong> 节点服务器仅运行在易失性内存（RAM）中的只读操作系统镜像上，物理固态硬盘（SSD）被完全卸载或设置严苛物理保护。</li>
+        <li><strong>重启即物理销毁：</strong> 一旦服务器重启、断电或受到异常物理拔插，内存中的所有临时运行时数据将在毫秒级内彻底物理擦除，任何第三方均无法提取数据残留。</li>
+      </ul>
+
+      <!-- 3. 我们收集的极少必要账户信息 -->
+      <h2>📋 三、仅限必要之最小化账户信息</h2>
+      <p>
+        为了维持基本的账户登录、订单支付状态验证及防止滥用，我们仅在控制台收集以下最小化业务数据：
+      </p>
+      <ul>
+        <li><strong>电子邮箱：</strong> 仅用于作为账户唯一标识符、找回密码及接收关键的账单变更通知。我们强烈支持并推荐使用 ProtonMail、Tuta 等加密匿名邮箱。</li>
+        <li><strong>密码哈希：</strong> 您的账户密码在入库前均经过行业标准的 Argon2 / BCrypt 强加盐单向哈希加密，包括我们在内的任何人都无法反解明文密码。</li>
+        <li><strong>总流量消耗计数器：</strong> 系统仅需维护一个累积的流量总额数值（例如：已使用 45GB / 总额 350GB），用于执行套餐结算，该数值完全脱钩于具体任何时间、任何协议或任何网站内容。</li>
+      </ul>
+
+      <!-- 4. Cookie 与网站分析 -->
+      <h2>🍪 四、推广落地页与 Cookie 政策</h2>
+      <p>
+        我们的前端落地页面极尽轻量纯粹，不加载任何侵害隐私的重型第三方跨站行为追踪脚本（如 Facebook Pixel 等跨站分析软件）。我们仅保留必要的浏览器会话缓存以维持页面瞬时打开性能，绝不出售或分享用户数据给任何商业广告网络。
+      </p>
+
+      <!-- 5. 政策生效与疑问联络 -->
+      <h2>✉️ 五、隐私条款联络</h2>
+      <p>
+        如果您对本隐私政策或 Flower Cloud 的数据安全措施有任何建议或疑虑，欢迎随时通过客户服务工单与我们取得联络。我们将竭诚守护您的每一次网络出行。
+      </p>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="https://ongkahheng0.flashleapaff.com/#?code=Wx6Ins9f" target="_blank" rel="nofollow" class="btn btn-pink btn-large">
+          安心畅联 · 立即注册
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <!-- 页脚 (严格只保留四个标题，打开新页面) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <a href="sitemap.html" target="_blank" class="footer-link">网站地图</a>
+        <a href="about.html" target="_blank" class="footer-link">关于我们</a>
+        <a href="terms.html" target="_blank" class="footer-link">服务条款</a>
+        <a href="privacy.html" target="_blank" class="footer-link">隐私政策</a>
+      </nav>
+      <div class="footer-copyright">
+        &copy; 2026 Flower Cloud. 保留所有权利。 专线直连 · 畅享极速网络体验
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
